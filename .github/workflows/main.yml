@@ -15,6 +15,9 @@ jobs:
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
+      
+    - name: Login to Docker Hub
+      run: echo ${{ secrets.DOCKERHUB_ACCESS_TOKEN }} | docker login -u itskmyoo --password-stdin
 
     - name: Build and push Docker image
       run: |
@@ -27,5 +30,3 @@ jobs:
     env:
       DOCKER_CLI_EXPERIMENTAL: enabled
       DOCKER_BUILDKIT: 1
-      DOCKER_USERNAME: itskmyoo
-      DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
