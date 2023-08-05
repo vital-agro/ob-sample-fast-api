@@ -27,4 +27,4 @@ jobs:
     env:
       DOCKER_CLI_EXPERIMENTAL: enabled
       DOCKER_BUILDKIT: 1
-      DOCKER_AUTH_CONFIG: '{"auths": {"https://index.docker.io/v1/": {"auth": "${{ secrets.DOCKER_ACCESS_TOKEN }}"}}}'
+      DOCKER_AUTH_CONFIG: '{"auths": {"https://index.docker.io/v1/": {"auth": "${{ secrets.DOCKERHUB_ACCESS_TOKEN }}"}}}'
