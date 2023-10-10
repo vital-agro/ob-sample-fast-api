@@ -24,7 +24,7 @@ jobs:
         docker buildx create --use
         docker buildx build \
           --file Dockerfile \
-          --tag itskmyoo/ob-sample-fast-api:latest \
+          --tag mlanphear/vital-api \
           --push .
 
     env:
